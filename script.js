@@ -1,3 +1,33 @@
+// Dark Mode Toggle
+const themeToggle = document.getElementById('themeToggle');
+const html = document.documentElement;
+
+// Check for saved theme preference or default to 'light' mode
+const currentTheme = localStorage.getItem('theme') || 'light';
+html.setAttribute('data-theme', currentTheme);
+
+// Update icon based on current theme
+function updateThemeIcon() {
+    const icon = themeToggle.querySelector('i');
+    if (html.getAttribute('data-theme') === 'dark') {
+        icon.className = 'fas fa-sun';
+    } else {
+        icon.className = 'fas fa-moon';
+    }
+}
+
+updateThemeIcon();
+
+// Toggle theme
+themeToggle.addEventListener('click', () => {
+    const currentTheme = html.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    
+    html.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    updateThemeIcon();
+});
+
 // Mobile Menu Toggle
 const mobileMenuToggle = document.getElementById('mobileMenuToggle');
 const nav = document.getElementById('nav');
@@ -143,3 +173,100 @@ nav.addEventListener('transitionend', () => {
 
 // Log page load for analytics (can be extended)
 console.log('InteriorGlanz website loaded successfully');
+
+// Contact Form Validation and Handling
+const contactForm = document.getElementById('contactForm');
+const formSuccess = document.getElementById('formSuccess');
+
+// Set minimum date to today
+const dateInput = document.getElementById('date');
+if (dateInput) {
+    const today = new Date().toISOString().split('T')[0];
+    dateInput.setAttribute('min', today);
+}
+
+if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        // Reset previous errors
+        document.querySelectorAll('.form-group').forEach(group => {
+            group.classList.remove('error');
+        });
+        
+        let isValid = true;
+        
+        // Validate Name
+        const name = document.getElementById('name');
+        if (!name.value.trim()) {
+            showError('name', 'Bitte geben Sie Ihren Namen ein.');
+            isValid = false;
+        }
+        
+        // Validate Email
+        const email = document.getElementById('email');
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!email.value.trim()) {
+            showError('email', 'Bitte geben Sie Ihre E-Mail-Adresse ein.');
+            isValid = false;
+        } else if (!emailPattern.test(email.value)) {
+            showError('email', 'Bitte geben Sie eine gültige E-Mail-Adresse ein.');
+            isValid = false;
+        }
+        
+        // Validate Privacy Checkbox
+        const privacy = document.getElementById('privacy');
+        if (!privacy.checked) {
+            showError('privacy', 'Bitte akzeptieren Sie die Datenschutzerklärung.');
+            isValid = false;
+        }
+        
+        if (isValid) {
+            // Here you would normally send the form data to a server
+            // For now, we'll just show a success message
+            
+            // Simulate form submission
+            contactForm.style.display = 'none';
+            formSuccess.style.display = 'block';
+            
+            // Optional: Reset form after successful submission
+            setTimeout(() => {
+                contactForm.reset();
+                contactForm.style.display = 'flex';
+                formSuccess.style.display = 'none';
+            }, 5000);
+        }
+    });
+}
+
+function showError(fieldId, message) {
+    const field = document.getElementById(fieldId);
+    const formGroup = field.closest('.form-group') || field.parentElement;
+    const errorMessage = document.getElementById(fieldId + 'Error');
+    
+    formGroup.classList.add('error');
+    if (errorMessage) {
+        errorMessage.textContent = message;
+    }
+}
+
+// FAQ Accordion
+const faqItems = document.querySelectorAll('.faq-item');
+
+faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    
+    question.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+        
+        // Close all FAQ items
+        faqItems.forEach(faq => {
+            faq.classList.remove('active');
+        });
+        
+        // Open clicked item if it wasn't active
+        if (!isActive) {
+            item.classList.add('active');
+        }
+    });
+});
