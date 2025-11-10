@@ -1,33 +1,520 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interior Glanz</title>
+    <meta name="description" content="Mobile Autoreinigung & Autoaufbereitung in Nürnberg ✓ Professionelle Fahrzeugpflege direkt vor Ort ✓ Keramikversiegelung ✓ Felgenversiegelung ✓ Ozon Behandlung - InteriorGlanz">
+    <meta name="keywords" content="Autoreinigung, Autoreinigung Nürnberg, Mobile Autoreinigung, Mobile Autoaufbereitung, Autoaufbereitung, Autoaufbereitung Nürnberg, Fahrzeugaufbereitung, Fahrzeugreinigung">
+    <meta name="author" content="InteriorGlanz">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Mobile Autoreinigung & Autoaufbereitung Nürnberg - InteriorGlanz">
+    <meta property="og:description" content="Professionelle mobile Autoreinigung in Nürnberg. Wir kommen zu Ihnen! Außen- & Innenreinigung, Keramikversiegelung, Felgenversiegelung, Ozon Behandlung.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://interiorglanz.de">
+    
+    <title>Mobile Autoreinigung Nürnberg | Autoaufbereitung | InteriorGlanz</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="styles.css">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "InteriorGlanz",
+      "image": "https://interiorglanz.de/logo.png",
+      "@id": "https://interiorglanz.de",
+      "url": "https://interiorglanz.de",
+      "telephone": "+49-911-12345678",
+      "priceRange": "€€",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Musterstraße 1",
+        "addressLocality": "Nürnberg",
+        "postalCode": "90402",
+        "addressCountry": "DE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 49.4521,
+        "longitude": 11.0767
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "08:00",
+        "closes": "18:00"
+      },
+      "sameAs": [
+        "https://www.facebook.com/interiorglanz",
+        "https://www.instagram.com/interiorglanz"
+      ],
+      "description": "Professionelle mobile Autoreinigung und Autoaufbereitung in Nürnberg. Wir bieten Außenreinigung, Innenreinigung, Keramikversiegelung, Felgenversiegelung und Ozon Behandlung direkt vor Ort.",
+      "areaServed": {
+        "@type": "City",
+        "name": "Nürnberg"
+      },
+      "serviceType": ["Autoreinigung", "Autoaufbereitung", "Mobile Autoreinigung", "Keramikversiegelung", "Felgenversiegelung", "Ozon Behandlung"]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Mobile Autoreinigung und Autoaufbereitung",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "InteriorGlanz"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Nürnberg"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Autoaufbereitungs-Pakete",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Basis Paket - Außenreinigung",
+              "description": "Handwäsche, Felgenreinigung, Scheiben innen/außen, Staubsaugen"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Premium Paket - Innenreinigung",
+              "description": "Komplette Innenraumaufbereitung mit Polsterreinigung und Geruchsneutralisation"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Komplettpaket - Innen & Außen",
+              "description": "Vollständige Fahrzeugaufbereitung innen und außen"
+            }
+          }
+        ]
+      }
+    }
+    </script>
 </head>
 <body>
-    <header>
-        <h1>Welcome to Interior Glanz</h1>
-    </header>
-    <main>
-        <section class="packages">
-            <h2>Our Packages</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Basic Package</h3>
-                    <p>Keramikversiegelung</p>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Interior<span>Glanz</span></h1>
                 </div>
-                <div class="card">
-                    <h3>Standard Package</h3>
-                    <p>Felgenversiegelung</p>
-                </div>
-                <div class="card">
-                    <h3>Premium Package</h3>
-                    <p>Ozon Behandlung</p>
+                
+                <nav class="nav" id="nav">
+                    <ul class="nav-list">
+                        <li><a href="#home" class="nav-link">Home</a></li>
+                        <li><a href="#pakete" class="nav-link">Pakete</a></li>
+                        <li><a href="#zusatzoptionen" class="nav-link">Zusatzoptionen</a></li>
+                        <li><a href="#uber-uns" class="nav-link">Über uns</a></li>
+                        <li><a href="#kontakt" class="nav-link">Kontakt</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="header-actions">
+                    <a href="tel:+4991112345678" class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>0911 / 123 456 78</span>
+                    </a>
+                    
+                    <button class="theme-toggle" id="themeToggle" aria-label="Theme umschalten">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menü öffnen">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title animate-fade-in">
+                    Mobile Autoreinigung & Autoaufbereitung in Nürnberg
+                </h1>
+                <p class="hero-subtitle animate-fade-in-delay">
+                    Professionelle Fahrzeugpflege direkt vor Ihrer Haustür – wir kommen zu Ihnen! 
+                    Erleben Sie erstklassige Autoreinigung und Autoaufbereitung in Nürnberg.
+                </p>
+                <div class="hero-buttons animate-fade-in-delay-2">
+                    <a href="#pakete" class="btn btn-primary btn-large">Pakete ansehen</a>
+                    <a href="#kontakt" class="btn btn-secondary btn-large">Termin vereinbaren</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>Mobile Autoreinigung vor Ort</h3>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Flexible Terminvereinbarung</h3>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Professionelle Aufbereitung</h3>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Hochwertige Produkte</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobile Service Banner -->
+    <section class="mobile-service">
+        <div class="container">
+            <div class="mobile-service-content">
+                <i class="fas fa-map-marker-alt"></i>
+                <h2>Wir kommen zu Ihnen!</h2>
+                <p>Mobile Autoaufbereitung in ganz Nürnberg und Umgebung</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section class="services" id="pakete">
+        <div class="container">
+            <div class="services-header">
+                <h2 class="section-title">Unsere Autoaufbereitungs-Pakete</h2>
+                <p class="section-subtitle">
+                    Wählen Sie das perfekte Paket für Ihre Autoreinigung in Nürnberg. 
+                    Alle Pakete sind für mobile Autoaufbereitung optimiert.
+                </p>
+            </div>
+            
+            <div class="packages-compact-grid">
+                <!-- Basis Paket -->
+                <div class="package-card compact">
+                    <div class="package-badge">Bestseller</div>
+                    <div class="package-icon">
+                        <i class="fas fa-sparkles"></i>
+                    </div>
+                    <h3 class="package-title">Basis Paket</h3>
+                    <p class="package-subtitle">Außenreinigung</p>
+                    <div class="package-price">
+                        <span class="price-amount">ab 49€</span>
+                    </div>
+                    <div class="package-duration">
+                        <i class="fas fa-clock"></i>
+                        <span>ca. 1-1,5 Std.</span>
+                    </div>
+                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i> Handwäsche mit Shampoo</li>
+                        <li><i class="fas fa-check"></i> Felgenreinigung</li>
+                        <li><i class="fas fa-check"></i> Scheiben innen & außen</li>
+                        <li><i class="fas fa-check"></i> Türrahmen reinigen</li>
+                        <li><i class="fas fa-check"></i> Kurzes Staubsaugen</li>
+                    </ul>
+                    <a href="#kontakt" class="btn btn-primary">Jetzt buchen</a>
+                </div>
+
+                <!-- Premium Innenreinigung -->
+                <div class="package-card compact featured">
+                    <div class="package-badge premium">Empfohlen</div>
+                    <div class="package-icon">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h3 class="package-title">Premium Paket</h3>
+                    <p class="package-subtitle">Innenreinigung</p>
+                    <div class="package-price">
+                        <span class="price-amount">ab 89€</span>
+                    </div>
+                    <div class="package-duration">
+                        <i class="fas fa-clock"></i>
+                        <span>ca. 2-3 Std.</span>
+                    </div>
+                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i> Komplettes Staubsaugen</li>
+                        <li><i class="fas fa-check"></i> Polsterreinigung</li>
+                        <li><i class="fas fa-check"></i> Armaturenbrett reinigen</li>
+                        <li><i class="fas fa-check"></i> Teppichreinigung</li>
+                        <li><i class="fas fa-check"></i> Geruchsneutralisation</li>
+                        <li><i class="fas fa-check"></i> Alle Kunststoffteile pflegen</li>
+                    </ul>
+                    <a href="#kontakt" class="btn btn-primary">Jetzt buchen</a>
+                </div>
+
+                <!-- Komplettpaket -->
+                <div class="package-card compact">
+                    <div class="package-badge complete">Komplett</div>
+                    <div class="package-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 class="package-title">Komplettpaket</h3>
+                    <p class="package-subtitle">Innen & Außen</p>
+                    <div class="package-price">
+                        <span class="price-amount">ab 129€</span>
+                        <span class="price-save">Spare 9€</span>
+                    </div>
+                    <div class="package-duration">
+                        <i class="fas fa-clock"></i>
+                        <span>ca. 3-4 Std.</span>
+                    </div>
+                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i> Alle Basis-Leistungen</li>
+                        <li><i class="fas fa-check"></i> Alle Premium-Leistungen</li>
+                        <li><i class="fas fa-check"></i> Motorwäsche (optional)</li>
+                        <li><i class="fas fa-check"></i> Kofferraum-Reinigung</li>
+                        <li><i class="fas fa-check"></i> Lederpflege</li>
+                    </ul>
+                    <a href="#kontakt" class="btn btn-primary">Jetzt buchen</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Zusatzoptionen Section -->
+    <section class="extras-section" id="zusatzoptionen">
+        <div class="container">
+            <h2 class="section-title center">Zusatzoptionen für Ihre Autoaufbereitung</h2>
+            <p class="section-subtitle center">
+                Perfektionieren Sie Ihre Autoreinigung mit unseren Premium-Zusatzoptionen
+            </p>
+            
+            <div class="extras-grid-compact">
+                <div class="extra-card">
+                    <div class="extra-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3>Keramikversiegelung</h3>
+                    <p class="extra-price">ab 199€</p>
+                    <p class="extra-description">Langanhaltender Schutz für Ihren Lack. Bis zu 2 Jahre Schutz vor Umwelteinflüssen.</p>
+                    <ul class="extra-benefits">
+                        <li><i class="fas fa-check-circle"></i> Extrem glänzende Oberfläche</li>
+                        <li><i class="fas fa-check-circle"></i> Wasser perlt ab (Lotuseffekt)</li>
+                        <li><i class="fas fa-check-circle"></i> UV-Schutz inklusive</li>
+                        <li><i class="fas fa-check-circle"></i> Leichte Reinigung</li>
+                    </ul>
+                </div>
+
+                <div class="extra-card">
+                    <div class="extra-icon">
+                        <i class="fas fa-ring"></i>
+                    </div>
+                    <h3>Felgenversiegelung</h3>
+                    <p class="extra-price">ab 79€</p>
+                    <p class="extra-description">Schützt Ihre Felgen vor Bremsstaub und Schmutz. Erleichtert die Reinigung erheblich.</p>
+                    <ul class="extra-benefits">
+                        <li><i class="fas fa-check-circle"></i> Schutz vor Bremsstaub</li>
+                        <li><i class="fas fa-check-circle"></i> Glänzende Felgen</li>
+                        <li><i class="fas fa-check-circle"></i> Einfache Pflege</li>
+                        <li><i class="fas fa-check-circle"></i> Bis zu 6 Monate Schutz</li>
+                    </ul>
+                </div>
+
+                <div class="extra-card">
+                    <div class="extra-icon">
+                        <i class="fas fa-wind"></i>
+                    </div>
+                    <h3>Ozon Behandlung</h3>
+                    <p class="extra-price">ab 59€</p>
+                    <p class="extra-description">Entfernt Gerüche nachhaltig aus dem Innenraum. Ideal gegen Rauch, Tiergerüche und Bakterien.</p>
+                    <ul class="extra-benefits">
+                        <li><i class="fas fa-check-circle"></i> Geruchsneutralisation</li>
+                        <li><i class="fas fa-check-circle"></i> Bakterien- & Virenbekämpfung</li>
+                        <li><i class="fas fa-check-circle"></i> Allergikerfreundlich</li>
+                        <li><i class="fas fa-check-circle"></i> Frischer Innenraum</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="uber-uns">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">Über InteriorGlanz</h2>
+                    <p class="about-description">
+                        Als führender Anbieter für <strong>mobile Autoreinigung in Nürnberg</strong> bringen wir professionelle 
+                        Autoaufbereitung direkt zu Ihnen. Seit über 5 Jahren sorgen wir dafür, dass Fahrzeuge in ganz Nürnberg 
+                        in neuem Glanz erstrahlen.
+                    </p>
+                    <p class="about-description">
+                        Unsere <strong>mobile Autoaufbereitung</strong> spart Ihnen Zeit und Aufwand. Ob zu Hause, im Büro oder 
+                        an einem anderen Wunschort – wir kommen mit professioneller Ausrüstung zu Ihnen und machen Ihr 
+                        Fahrzeug wieder wie neu.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <i class="fas fa-users"></i>
+                            <h4>Über 1.000 zufriedene Kunden in Nürnberg</h4>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-award"></i>
+                            <h4>5+ Jahre Erfahrung in Autoaufbereitung</h4>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-leaf"></i>
+                            <h4>100% umweltfreundliche Produkte</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-car-side"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Bereit für eine professionelle Autoreinigung?</h2>
+                <p>Vereinbaren Sie jetzt Ihren Termin für mobile Autoaufbereitung in Nürnberg</p>
+                <div class="hero-buttons">
+                    <a href="#kontakt" class="btn btn-primary btn-large">Jetzt Termin buchen</a>
+                    <a href="tel:+4991112345678" class="btn btn-secondary btn-large">
+                        <i class="fas fa-phone"></i> 0911 / 123 456 78
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="kontakt">
+        <div class="container">
+            <h2 class="section-title">Kontakt & Terminvereinbarung</h2>
+            <p class="section-subtitle center">
+                Kontaktieren Sie uns für Ihre mobile Autoreinigung in Nürnberg
+            </p>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item-large">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Telefon</h3>
+                            <a href="tel:+4991112345678">0911 / 123 456 78</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item-large">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>E-Mail</h3>
+                            <a href="mailto:info@interiorglanz.de">info@interiorglanz.de</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item-large">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Servicegebiet</h3>
+                            <p>Nürnberg und Umgebung (30 km Radius)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item-large">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Öffnungszeiten</h3>
+                            <p>Mo-Sa: 08:00 - 18:00 Uhr</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Interior<span>Glanz</span></h3>
+                    <p>Ihre Experten für mobile Autoreinigung und Autoaufbereitung in Nürnberg.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <p><i class="fas fa-check"></i> Mobile Autoreinigung</p>
+                    <p><i class="fas fa-check"></i> Autoaufbereitung Nürnberg</p>
+                    <p><i class="fas fa-check"></i> Keramikversiegelung</p>
+                    <p><i class="fas fa-check"></i> Ozon Behandlung</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Kontakt</h4>
+                    <p><i class="fas fa-phone"></i> 0911 / 123 456 78</p>
+                    <p><i class="fas fa-envelope"></i> info@interiorglanz.de</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Nürnberg & Umgebung</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 InteriorGlanz. Alle Rechte vorbehalten. | <a href="#datenschutz">Datenschutz</a> | <a href="#impressum">Impressum</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/4991112345678" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp Kontakt">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
