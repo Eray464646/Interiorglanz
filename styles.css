@@ -1017,7 +1017,30 @@ body {
     }
 }
 
-/* Creative sparkle animation for package headers */
+/* Internal links styling for better SEO UX */
+.about-description a,
+.faq-answer a,
+.hero-subtitle a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+    border-bottom: 1px solid transparent;
+}
+
+.about-description a:hover,
+.faq-answer a:hover,
+.hero-subtitle a:hover {
+    border-bottom: 1px solid var(--primary-color);
+}
+
+[data-theme="dark"] .about-description a,
+[data-theme="dark"] .faq-answer a,
+[data-theme="dark"] .hero-subtitle a {
+    color: #FFD700;
+}
+
+/* Creative sparkle animation for package headers - DISABLED */
 @keyframes sparkle {
     0%, 100% {
         transform: scale(1) rotate(0deg);
@@ -1030,11 +1053,11 @@ body {
 }
 
 .package-header i {
-    animation: sparkle 3s ease-in-out infinite;
+    /* animation: sparkle 3s ease-in-out infinite; */ /* DISABLED - too distracting */
 }
 
-/* Shine effect for featured cards */
-.package-card.compact.featured::before {
+/* Shine effect for featured cards - DISABLED */
+/* .package-card.compact.featured::before {
     content: '';
     position: absolute;
     top: -50%;
@@ -1049,7 +1072,7 @@ body {
     );
     transform: rotate(45deg);
     animation: shine 3s infinite;
-}
+} */
 
 @keyframes shine {
     0% {
