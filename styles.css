@@ -22,8 +22,8 @@
 
 /* Dark Mode Variables */
 [data-theme="dark"] {
-    --primary-color: #FFD700;
-    --secondary-color: #FFD700;
+    --primary-color: #4A90E2;
+    --secondary-color: #e0e0e0;
     --text-color: #e0e0e0;
     --text-light: #b0b0b0;
     --bg-light: #1a1a1a;
@@ -117,13 +117,13 @@ body {
     transition: var(--transition);
 }
 
-.logo h1 {
+.logo .logo-text {
     font-size: 1.8rem;
     font-weight: 700;
     color: var(--secondary-color);
 }
 
-.logo h1 span {
+.logo .logo-text span {
     color: var(--primary-color);
 }
 
@@ -302,10 +302,21 @@ body {
     box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
 }
 
+[data-theme="dark"] .btn-primary {
+    background: #4A90E2;
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+}
+
 .btn-primary:hover {
     background: #ffed4e;
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+}
+
+[data-theme="dark"] .btn-primary:hover {
+    background: #357ABD;
+    box-shadow: 0 6px 20px rgba(74, 144, 226, 0.5);
 }
 
 .btn-secondary {
@@ -488,6 +499,17 @@ body {
     font-size: 1.1rem;
     color: var(--text-light);
     line-height: 1.8;
+}
+
+.section-subtitle a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.section-subtitle a:hover {
+    text-decoration: underline;
 }
 
 .services-grid {
@@ -728,7 +750,15 @@ body {
     margin-bottom: 1rem;
 }
 
-.footer-section h3 span {
+.footer-section .footer-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.footer-section h3 span,
+.footer-section .footer-logo span {
     color: var(--primary-color);
 }
 
@@ -742,6 +772,16 @@ body {
     margin-bottom: 0.5rem;
 }
 
+.footer-section p a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-section p a:hover {
+    color: var(--primary-color);
+}
+
 .footer-section i {
     margin-right: 0.5rem;
     color: var(--primary-color);
@@ -752,6 +792,16 @@ body {
     padding-top: 2rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-bottom a {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-bottom a:hover {
+    color: var(--primary-color);
 }
 
 /* WhatsApp Float Button */
@@ -1259,4 +1309,285 @@ body {
     color: var(--text-light);
     line-height: 1.7;
     margin: 0;
+}
+
+/* Compact Package Cards */
+.packages-compact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.package-card.compact {
+    background: var(--bg-card);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    position: relative;
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+}
+
+.package-card.compact:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-color);
+}
+
+.package-card.compact.featured {
+    border-color: var(--primary-color);
+    background: linear-gradient(135deg, rgba(74, 144, 226, 0.05) 0%, var(--bg-card) 100%);
+}
+
+[data-theme="dark"] .package-card.compact.featured {
+    background: linear-gradient(135deg, rgba(74, 144, 226, 0.1) 0%, var(--bg-card) 100%);
+}
+
+.package-badge {
+    position: absolute;
+    top: -12px;
+    right: 15px;
+    background: var(--primary-color);
+    color: #ffffff;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.75rem;
+    box-shadow: var(--shadow);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.package-badge.premium {
+    background: linear-gradient(135deg, #4A90E2 0%, #357ABD 100%);
+}
+
+.package-badge.complete {
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+    color: var(--secondary-color);
+}
+
+.package-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, rgba(74, 144, 226, 0.8) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+.package-title {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 0.25rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+.package-subtitle {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    text-align: center;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.package-price {
+    text-align: center;
+    margin-bottom: 0.75rem;
+}
+
+.price-amount {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.price-save {
+    display: block;
+    font-size: 0.85rem;
+    color: #28a745;
+    font-weight: 600;
+    margin-top: 0.25rem;
+}
+
+.package-duration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: var(--text-light);
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    background: var(--bg-light);
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.package-duration i {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+}
+
+.package-features {
+    list-style: none;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.package-features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.package-features i {
+    color: var(--primary-color);
+    margin-top: 3px;
+    flex-shrink: 0;
+    font-size: 0.85rem;
+}
+
+.package-card.compact .btn {
+    width: 100%;
+    text-align: center;
+    margin-top: auto;
+    padding: 12px 24px;
+    font-size: 0.95rem;
+}
+
+/* Extras Section Improvements */
+.extras-section {
+    padding: 80px 0;
+    background: var(--bg-light);
+}
+
+.section-subtitle.center {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 3rem;
+}
+
+.section-title.center {
+    text-align: center;
+}
+
+.section-title.center::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.extras-grid-compact {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.extra-card {
+    background: var(--bg-card);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    text-align: center;
+    border: 2px solid transparent;
+}
+
+.extra-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-color);
+}
+
+.extra-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, rgba(74, 144, 226, 0.8) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+.extra-card h3 {
+    font-size: 1.3rem;
+    color: var(--text-color);
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+}
+
+.extra-price {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.extra-description {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.extra-benefits {
+    list-style: none;
+    text-align: left;
+}
+
+.extra-benefits li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+    font-size: 0.9rem;
+}
+
+.extra-benefits i {
+    color: var(--primary-color);
+    margin-top: 3px;
+    flex-shrink: 0;
+    font-size: 0.85rem;
+}
+
+/* Improved CTA Styling */
+.cta-content p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2rem;
+}
+
+/* Responsive adjustments for compact cards */
+@media (max-width: 768px) {
+    .packages-compact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .extras-grid-compact {
+        grid-template-columns: 1fr;
+    }
+    
+    .package-title {
+        font-size: 1.3rem;
+    }
+    
+    .price-amount {
+        font-size: 1.75rem;
+    }
 }
