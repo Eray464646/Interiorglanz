@@ -3,11 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Mobile Fahrzeugaufbereitung in Nürnberg – InteriorGlanz bietet professionelle Innen- & Außenreinigung direkt vor Ort. Top Service, faire Preise!">
-    <meta name="keywords" content="Fahrzeugaufbereitung, Nürnberg, mobile Autopflege, Innenreinigung, Außenreinigung">
-    <title>InteriorGlanz - Mobile Fahrzeugaufbereitung Nürnberg</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Mobile Autoreinigung & Autoaufbereitung Nürnberg ✓ Professionelle Innen- & Außenreinigung vor Ort ✓ Mobile Fahrzeugaufbereitung ✓ Faire Preise ✓ Top Service">
+    <meta name="keywords" content="Autoreinigung, Autoreinigung Nürnberg, Mobile Autoreinigung, Mobile Autoaufbereitung, Autoaufbereitung, Autoaufbereitung Nürnberg, Fahrzeugaufbereitung, mobile Autopflege, Innenreinigung, Außenreinigung">
+    <meta name="author" content="InteriorGlanz">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Tags for Social Media -->
+    <meta property="og:title" content="InteriorGlanz - Mobile Autoreinigung & Autoaufbereitung Nürnberg">
+    <meta property="og:description" content="Professionelle mobile Autoreinigung und Autoaufbereitung in Nürnberg. Wir kommen zu Ihnen!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://interiorglanz.de">
+    <meta property="og:locale" content="de_DE">
+    
+    <title>Mobile Autoreinigung & Autoaufbereitung Nürnberg | InteriorGlanz</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Schema.org Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "InteriorGlanz",
+      "description": "Mobile Autoreinigung und Autoaufbereitung in Nürnberg",
+      "url": "https://interiorglanz.de",
+      "telephone": "+49-170-9095730",
+      "email": "info@interiorglanz.de",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Nürnberg",
+        "addressRegion": "Bayern",
+        "addressCountry": "DE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "49.4521",
+        "longitude": "11.0767"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Nürnberg"
+      },
+      "priceRange": "€€",
+      "openingHours": "Mo-Sa 08:00-18:00",
+      "sameAs": []
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Mobile Autoreinigung und Autoaufbereitung",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "InteriorGlanz"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Nürnberg"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Reinigungspakete",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Komplettpaket Deluxe"
+            },
+            "price": "249",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Außenreinigung Deluxe"
+            },
+            "price": "149",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Innenreinigung Basic"
+            },
+            "price": "59.90",
+            "priceCurrency": "EUR"
+          }
+        ]
+      }
+    }
+    </script>
 </head>
 <body>
     <!-- Header -->
@@ -25,17 +123,22 @@
                         <li><a href="#contact" class="nav-link">Kontakt</a></li>
                     </ul>
                 </nav>
-                <div class="header-contact">
-                    <a href="tel:01709095730" class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <span>0170 909 57 30</span>
-                    </a>
-                    <a href="mailto:info@interiorglanz.de" class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>info@interiorglanz.de</span>
-                    </a>
+                <div class="header-actions">
+                    <button class="theme-toggle" id="themeToggle" aria-label="Theme umschalten">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <div class="header-contact">
+                        <a href="tel:01709095730" class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>0170 909 57 30</span>
+                        </a>
+                        <a href="mailto:info@interiorglanz.de" class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@interiorglanz.de</span>
+                        </a>
+                    </div>
                 </div>
-                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menü öffnen">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -49,8 +152,8 @@
         <div class="hero-overlay"></div>
         <div class="container">
             <div class="hero-content">
-                <h2 class="hero-title animate-fade-in">Mobile Fahrzeugaufbereitung in Nürnberg – Innen- &amp; Außenreinigung vor Ort</h2>
-                <p class="hero-subtitle animate-fade-in-delay">Mobile Fahrzeugaufbereitung Nürnberg Schwaig – strahlender Glanz für jedes Detail! Wir reinigen Ihr Fahrzeug schonend, gründlich und flexibel direkt bei Ihnen vor Ort.</p>
+                <h1 class="hero-title animate-fade-in">Mobile Autoreinigung & Autoaufbereitung in Nürnberg</h1>
+                <p class="hero-subtitle animate-fade-in-delay">Professionelle Innen- & Außenreinigung direkt vor Ort – Wir reinigen Ihr Fahrzeug schonend, gründlich und flexibel bei Ihnen. Vertrauen Sie auf erstklassigen Service!</p>
                 <div class="hero-buttons animate-fade-in-delay-2">
                     <a href="#contact" class="btn btn-primary">Jetzt Termin anfragen!</a>
                     <a href="#services" class="btn btn-secondary">Unsere Pakete entdecken</a>
@@ -137,115 +240,193 @@
     <section class="services" id="services">
         <div class="container">
             <div class="services-header">
-                <h2 class="section-title">Leistungen – Unsere Pakete im Überblick</h2>
-                <p class="section-subtitle">Entdecken Sie unsere speziell abgestimmten Pakete für die professionelle Reinigung Ihres Fahrzeugs. Ob grundlegende Pflege, intensive Reinigung oder umfassende Rundum-Behandlung – bei InteriorGlanz finden Sie das passende Angebot.</p>
+                <h2 class="section-title">Unsere Autoaufbereitung Pakete</h2>
+                <p class="section-subtitle">Entdecken Sie unsere professionell abgestimmten Pakete für die Autoreinigung und Autoaufbereitung Ihres Fahrzeugs in Nürnberg. Ob grundlegende Pflege oder intensive Komplettaufbereitung – bei InteriorGlanz finden Sie das passende Angebot.</p>
             </div>
             
-            <div class="services-grid">
-                <!-- Package 1 -->
-                <div class="service-card featured">
-                    <div class="service-badge">BESTSELLER</div>
-                    <div class="service-header">
-                        <h3>Komplettpaket Deluxe</h3>
-                        <div class="price-container">
-                            <span class="price-old">279€</span>
-                            <span class="price">249€</span>
-                        </div>
-                    </div>
-                    <p class="service-subtitle">Innen- und Außenaufbereitung auf höchstem Niveau – mobil &amp; professionell</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Innenreinigung mit allen Leistungen des Deluxe-Pakets</li>
-                        <li><i class="fas fa-check"></i> Aktivschaum-Vorreinigung gegen Schmutz und Insekten</li>
-                        <li><i class="fas fa-check"></i> Handwäsche mit pH-neutralem Shampoo</li>
-                        <li><i class="fas fa-check"></i> Felgenreinigung mit Spezialreiniger</li>
-                        <li><i class="fas fa-check"></i> Streifenfreie Trocknung mit Mikrofasertüchern</li>
-                        <li><i class="fas fa-check"></i> Detailreinigung von Türfalzen, Tankdeckel und Emblemen</li>
-                    </ul>
-                    <div class="service-duration">
-                        <i class="fas fa-clock"></i> Dauer: ca. 5 - 6 Std.
-                    </div>
-                    <p class="service-description">Für Fahrzeugbesitzer, die keine Kompromisse eingehen. Unsere Komplettpaket Deluxe-Reinigung sorgt für eine gründliche Innen- und Außenpflege – perfekt für alle, die Wert auf ein glänzendes Ergebnis bis ins Detail legen. Vom intensiven Staubsaugen und Wischen bis hin zu einer exzellenten Außenwäsche, die dem Lack neuen Glanz verleiht. Ideal, wenn Sie Ihr Fahrzeug rundum pflegen möchten.</p>
-                    <a href="#contact" class="btn btn-primary">Jetzt anfragen</a>
+            <!-- Komplettpaket -->
+            <div class="package-section package-complete">
+                <div class="package-header">
+                    <i class="fas fa-star"></i>
+                    <h3>Komplettpaket - Innen & Außen</h3>
                 </div>
-
-                <!-- Package 2 -->
-                <div class="service-card">
-                    <div class="service-header">
-                        <h3>Außenwäsche Deluxe</h3>
-                        <div class="price-container">
-                            <span class="price">149€</span>
+                <div class="services-grid">
+                    <div class="service-card featured">
+                        <div class="service-badge">BESTSELLER</div>
+                        <div class="service-header">
+                            <h4>Komplettpaket Deluxe</h4>
+                            <div class="price-container">
+                                <span class="price-old">279€</span>
+                                <span class="price">249€</span>
+                            </div>
                         </div>
+                        <p class="service-subtitle">Komplette Autoaufbereitung innen & außen auf höchstem Niveau</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Innenreinigung mit allen Leistungen des Deluxe-Pakets</li>
+                            <li><i class="fas fa-check"></i> Aktivschaum-Vorreinigung gegen Schmutz und Insekten</li>
+                            <li><i class="fas fa-check"></i> Handwäsche mit pH-neutralem Shampoo</li>
+                            <li><i class="fas fa-check"></i> Felgenreinigung mit Spezialreiniger</li>
+                            <li><i class="fas fa-check"></i> Streifenfreie Trocknung mit Mikrofasertüchern</li>
+                            <li><i class="fas fa-check"></i> Detailreinigung von Türfalzen, Tankdeckel und Emblemen</li>
+                        </ul>
+                        <div class="service-duration">
+                            <i class="fas fa-clock"></i> Dauer: ca. 5 - 6 Std.
+                        </div>
+                        <p class="service-description">Unsere professionelle Komplettaufbereitung vereint intensive Innenreinigung und perfekte Außenwäsche. Ideal für höchste Ansprüche an Autoreinigung in Nürnberg.</p>
+                        <a href="#contact" class="btn btn-primary">Jetzt anfragen</a>
                     </div>
-                    <p class="service-subtitle">Intensive Außenreinigung für den perfekten Glanz</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Aktivschaum-Vorreinigung gegen Schmutz und Insekten</li>
-                        <li><i class="fas fa-check"></i> Handwäsche mit pH-neutralem Shampoo</li>
-                        <li><i class="fas fa-check"></i> Felgenreinigung mit Spezialreiniger</li>
-                        <li><i class="fas fa-check"></i> Streifenfreie Trocknung mit Mikrofasertüchern</li>
-                        <li><i class="fas fa-check"></i> Detailreinigung von Türfalzen, Tankdeckel und Emblemen</li>
-                    </ul>
-                    <p class="service-description">Unsere Außenwäsche Deluxe sorgt für einen streifenfreien Glanz und schützt den Lack mit höchster Präzision. Vom Aktivschaum gegen Schmutz und Insekten bis hin zur Handwäsche mit pH-neutralem Shampoo bieten wir eine intensive Außenreinigung, die den Lack schont und für ein beeindruckendes Ergebnis sorgt.</p>
-                    <a href="#contact" class="btn btn-secondary">Jetzt anfragen</a>
                 </div>
+            </div>
 
-                <!-- Package 3 -->
-                <div class="service-card">
-                    <div class="service-header">
-                        <h3>Innenreinigung Basic</h3>
-                        <div class="price-container">
-                            <span class="price">59,90€</span>
-                        </div>
-                    </div>
-                    <p class="service-subtitle">Die gründliche Basisreinigung</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Gründliches Saugen des Kofferraums</li>
-                        <li><i class="fas fa-check"></i> Saugen der Fußmatten und des Fußraums</li>
-                        <li><i class="fas fa-check"></i> Entstauben aller Oberflächen</li>
-                        <li><i class="fas fa-check"></i> Reinigung aller Scheiben (innen)</li>
-                        <li><i class="fas fa-check"></i> Saugen der Sitze</li>
-                    </ul>
-                    <p class="service-description">Ideal für eine schnelle und gründliche Grundreinigung des Innenraums. Perfekt für alle, die den Innenraum Ihres Fahrzeugs schnell auf Vordermann bringen möchten.</p>
-                    <a href="#contact" class="btn btn-secondary">Jetzt anfragen</a>
+            <!-- Außenreinigung -->
+            <div class="package-section package-exterior">
+                <div class="package-header">
+                    <i class="fas fa-car"></i>
+                    <h3>Außenreinigung - Glanz & Schutz</h3>
                 </div>
-
-                <!-- Package 4 -->
-                <div class="service-card">
-                    <div class="service-header">
-                        <h3>Innenreinigung Premium</h3>
-                        <div class="price-container">
-                            <span class="price">89,90€</span>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-header">
+                            <h4>Außenwäsche Deluxe</h4>
+                            <div class="price-container">
+                                <span class="price">149€</span>
+                            </div>
                         </div>
+                        <p class="service-subtitle">Intensive Außenreinigung für perfekten Glanz</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Aktivschaum-Vorreinigung gegen Schmutz und Insekten</li>
+                            <li><i class="fas fa-check"></i> Handwäsche mit pH-neutralem Shampoo</li>
+                            <li><i class="fas fa-check"></i> Felgenreinigung mit Spezialreiniger</li>
+                            <li><i class="fas fa-check"></i> Streifenfreie Trocknung mit Mikrofasertüchern</li>
+                            <li><i class="fas fa-check"></i> Detailreinigung von Türfalzen, Tankdeckel und Emblemen</li>
+                        </ul>
+                        <div class="service-duration">
+                            <i class="fas fa-clock"></i> Dauer: ca. 2 - 3 Std.
+                        </div>
+                        <p class="service-description">Professionelle Außenreinigung mit höchster Präzision. Schützt den Lack und sorgt für beeindruckenden Glanz.</p>
+                        <a href="#contact" class="btn btn-secondary">Jetzt anfragen</a>
                     </div>
-                    <p class="service-subtitle">Tiefenreinigung für besonderen Komfort</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Enthält alle Leistungen des Basic-Pakets sowie:</li>
-                        <li><i class="fas fa-check"></i> Intensive Reinigung der Sitze, Fußräume und des Kofferraums</li>
-                        <li><i class="fas fa-check"></i> Gründliche Reinigung aller Kunststoffoberflächen</li>
-                        <li><i class="fas fa-check"></i> Reinigung von Lüftungsschlitzen</li>
-                        <li><i class="fas fa-check"></i> Entfernung von Flecken auf Sitzen, Teppichen und Oberflächen</li>
-                    </ul>
-                    <p class="service-description">Für eine intensive Reinigung, die auch hartnäckigen Schmutz beseitigt und für eine angenehme Frische sorgt. Ideal für alle, die mehr Wert auf Detailreinigung legen.</p>
-                    <a href="#contact" class="btn btn-secondary">Jetzt anfragen</a>
                 </div>
+            </div>
 
-                <!-- Package 5 -->
-                <div class="service-card">
-                    <div class="service-header">
-                        <h3>Innenreinigung Deluxe</h3>
-                        <div class="price-container">
-                            <span class="price">129,90€</span>
+            <!-- Innenreinigung -->
+            <div class="package-section package-interior">
+                <div class="package-header">
+                    <i class="fas fa-couch"></i>
+                    <h3>Innenreinigung - Sauberkeit & Frische</h3>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-header">
+                            <h4>Innenreinigung Basic</h4>
+                            <div class="price-container">
+                                <span class="price">59,90€</span>
+                            </div>
                         </div>
+                        <p class="service-subtitle">Die gründliche Basisreinigung</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Gründliches Saugen des Kofferraums</li>
+                            <li><i class="fas fa-check"></i> Saugen der Fußmatten und des Fußraums</li>
+                            <li><i class="fas fa-check"></i> Entstauben aller Oberflächen</li>
+                            <li><i class="fas fa-check"></i> Reinigung aller Scheiben (innen)</li>
+                            <li><i class="fas fa-check"></i> Saugen der Sitze</li>
+                        </ul>
+                        <div class="service-duration">
+                            <i class="fas fa-clock"></i> Dauer: ca. 1 - 1,5 Std.
+                        </div>
+                        <p class="service-description">Ideal für schnelle und gründliche Grundreinigung des Innenraums. Perfekt für regelmäßige Pflege.</p>
+                        <a href="#contact" class="btn btn-secondary">Jetzt anfragen</a>
                     </div>
-                    <p class="service-subtitle">Rundum-Pflege auf höchstem Niveau</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Enthält alle Leistungen des Premium-Pakets sowie:</li>
-                        <li><i class="fas fa-check"></i> Materialpflege für Leder, Alcantara und Textil (schonende Behandlung und Pflegeprodukte)</li>
-                        <li><i class="fas fa-check"></i> Schutz und Versiegelung empfindlicher Bereiche, wie z.B. Einstiegsleisten</li>
-                        <li><i class="fas fa-check"></i> Versiegelung der Scheiben für besseren Schutz und eine wasserabweisende Wirkung</li>
-                        <li><i class="fas fa-check"></i> Gummipflege von empfindlichen Kunststoffteilen im Innenraum für zusätzlichen Schutz und Glanz</li>
-                    </ul>
-                    <p class="service-description">Unser Premium-Paket für höchste Ansprüche. Ideal für Kunden, die ihr Fahrzeug rundum pflegen und versiegeln möchten, um es vor Umwelteinflüssen zu schützen.</p>
-                    <a href="#contact" class="btn btn-secondary">Jetzt anfragen</a>
+
+                    <div class="service-card">
+                        <div class="service-header">
+                            <h4>Innenreinigung Premium</h4>
+                            <div class="price-container">
+                                <span class="price">89,90€</span>
+                            </div>
+                        </div>
+                        <p class="service-subtitle">Tiefenreinigung für besonderen Komfort</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Alle Leistungen des Basic-Pakets</li>
+                            <li><i class="fas fa-check"></i> Intensive Reinigung der Sitze und Fußräume</li>
+                            <li><i class="fas fa-check"></i> Gründliche Reinigung aller Kunststoffoberflächen</li>
+                            <li><i class="fas fa-check"></i> Reinigung von Lüftungsschlitzen</li>
+                            <li><i class="fas fa-check"></i> Fleckenentfernung auf Sitzen und Teppichen</li>
+                        </ul>
+                        <div class="service-duration">
+                            <i class="fas fa-clock"></i> Dauer: ca. 2 - 3 Std.
+                        </div>
+                        <p class="service-description">Intensive Innenreinigung, die hartnäckigen Schmutz beseitigt und für angenehme Frische sorgt.</p>
+                        <a href="#contact" class="btn btn-secondary">Jetzt anfragen</a>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-header">
+                            <h4>Innenreinigung Deluxe</h4>
+                            <div class="price-container">
+                                <span class="price">129,90€</span>
+                            </div>
+                        </div>
+                        <p class="service-subtitle">Rundum-Pflege auf höchstem Niveau</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Alle Leistungen des Premium-Pakets</li>
+                            <li><i class="fas fa-check"></i> Materialpflege für Leder, Alcantara und Textil</li>
+                            <li><i class="fas fa-check"></i> Schutz und Versiegelung empfindlicher Bereiche</li>
+                            <li><i class="fas fa-check"></i> Scheibenversiegelung für Wasserschutz</li>
+                            <li><i class="fas fa-check"></i> Gummipflege für Kunststoffteile im Innenraum</li>
+                        </ul>
+                        <div class="service-duration">
+                            <i class="fas fa-clock"></i> Dauer: ca. 3 - 4 Std.
+                        </div>
+                        <p class="service-description">Premium-Paket für höchste Ansprüche. Umfassender Schutz vor Umwelteinflüssen.</p>
+                        <a href="#contact" class="btn btn-secondary">Jetzt anfragen</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Zusatzoptionen -->
+            <div class="package-section package-extras">
+                <div class="package-header">
+                    <i class="fas fa-plus-circle"></i>
+                    <h3>Zusatzoptionen - Individuell erweiterbar</h3>
+                </div>
+                <div class="services-grid extras-grid">
+                    <div class="service-card extra-card">
+                        <div class="extra-icon"><i class="fas fa-shield-alt"></i></div>
+                        <h4>Lackversiegelung</h4>
+                        <p class="price">ab 99€</p>
+                        <p>Langanhaltender Schutz für Ihren Lack</p>
+                    </div>
+                    <div class="service-card extra-card">
+                        <div class="extra-icon"><i class="fas fa-spray-can"></i></div>
+                        <h4>Polsterreinigung</h4>
+                        <p class="price">ab 79€</p>
+                        <p>Tiefenreinigung für Sitze und Polster</p>
+                    </div>
+                    <div class="service-card extra-card">
+                        <div class="extra-icon"><i class="fas fa-air-freshener"></i></div>
+                        <h4>Ozon-Behandlung</h4>
+                        <p class="price">ab 59€</p>
+                        <p>Geruchsneutralisation & Desinfektion</p>
+                    </div>
+                    <div class="service-card extra-card">
+                        <div class="extra-icon"><i class="fas fa-tint"></i></div>
+                        <h4>Scheibenversiegelung</h4>
+                        <p class="price">ab 49€</p>
+                        <p>Lotus-Effekt für bessere Sicht</p>
+                    </div>
+                    <div class="service-card extra-card">
+                        <div class="extra-icon"><i class="fas fa-scrubber"></i></div>
+                        <h4>Motorwäsche</h4>
+                        <p class="price">ab 69€</p>
+                        <p>Schonende Motorraumreinigung</p>
+                    </div>
+                    <div class="service-card extra-card">
+                        <div class="extra-icon"><i class="fas fa-redo"></i></div>
+                        <h4>Felgenversiegelung</h4>
+                        <p class="price">ab 59€</p>
+                        <p>Langanhaltender Felgenschutz</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -264,8 +445,84 @@
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
-            <h2 class="section-title">Kontakt</h2>
+            <h2 class="section-title">Termin anfragen</h2>
+            <p class="section-subtitle">Kontaktieren Sie uns für einen Termin zur mobilen Autoreinigung in Nürnberg</p>
+            
             <div class="contact-grid">
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm" aria-label="Kontaktformular">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Name *</label>
+                                <input type="text" id="name" name="name" required aria-required="true" placeholder="Ihr Name">
+                                <span class="error-message" id="nameError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">E-Mail *</label>
+                                <input type="email" id="email" name="email" required aria-required="true" placeholder="ihre@email.de">
+                                <span class="error-message" id="emailError"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Telefon (optional)</label>
+                                <input type="tel" id="phone" name="phone" placeholder="0170 123 4567">
+                            </div>
+                            <div class="form-group">
+                                <label for="date">Wunschtermin</label>
+                                <input type="date" id="date" name="date" min="">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="package">Gewünschtes Paket</label>
+                                <select id="package" name="package">
+                                    <option value="">Bitte wählen...</option>
+                                    <option value="komplettpaket-deluxe">Komplettpaket Deluxe (249€)</option>
+                                    <option value="aussenwaesche-deluxe">Außenwäsche Deluxe (149€)</option>
+                                    <option value="innenreinigung-basic">Innenreinigung Basic (59,90€)</option>
+                                    <option value="innenreinigung-premium">Innenreinigung Premium (89,90€)</option>
+                                    <option value="innenreinigung-deluxe">Innenreinigung Deluxe (129,90€)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="extras">Zusatzoption (optional)</label>
+                                <select id="extras" name="extras">
+                                    <option value="">Keine Zusatzoption</option>
+                                    <option value="lackversiegelung">Lackversiegelung (ab 99€)</option>
+                                    <option value="polsterreinigung">Polsterreinigung (ab 79€)</option>
+                                    <option value="ozon">Ozon-Behandlung (ab 59€)</option>
+                                    <option value="scheibenversiegelung">Scheibenversiegelung (ab 49€)</option>
+                                    <option value="motorwaesche">Motorwäsche (ab 69€)</option>
+                                    <option value="felgenversiegelung">Felgenversiegelung (ab 59€)</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Nachricht (optional)</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Ihre Nachricht an uns..."></textarea>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="privacy" name="privacy" required aria-required="true">
+                            <label for="privacy">Ich habe die Datenschutzerklärung gelesen und akzeptiere diese. *</label>
+                            <span class="error-message" id="privacyError"></span>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-large">
+                            <i class="fas fa-paper-plane"></i> Jetzt Termin anfragen
+                        </button>
+                        
+                        <div class="form-success" id="formSuccess" style="display: none;">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Vielen Dank! Ihre Anfrage wurde erfolgreich gesendet. Wir melden uns zeitnah bei Ihnen.</p>
+                        </div>
+                    </form>
+                </div>
+                
                 <div class="contact-info">
                     <div class="contact-item-large">
                         <i class="fas fa-phone"></i>
@@ -287,6 +544,83 @@
                             <h3>Service-Gebiet</h3>
                             <p>Nürnberg, Schwaig und Umgebung</p>
                         </div>
+                    </div>
+                    <div class="contact-item-large">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Öffnungszeiten</h3>
+                            <p>Mo - Sa: 08:00 - 18:00 Uhr</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2 class="section-title">Häufig gestellte Fragen</h2>
+            <p class="section-subtitle">Antworten auf die wichtigsten Fragen zur mobilen Autoreinigung in Nürnberg</p>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Was bedeutet mobile Autoreinigung?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Bei der mobilen Autoreinigung kommen wir direkt zu Ihnen nach Hause oder an Ihren Arbeitsplatz in Nürnberg und Umgebung. Sie sparen Zeit und müssen Ihr Fahrzeug nicht zu uns bringen.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Wie lange dauert eine Autoaufbereitung?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Die Dauer hängt vom gewählten Paket ab. Eine Basis-Innenreinigung dauert ca. 1-1,5 Stunden, während unser Komplettpaket Deluxe etwa 5-6 Stunden in Anspruch nimmt.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Welche Bereiche deckt die mobile Autoreinigung in Nürnberg ab?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Wir bieten unsere mobile Autoaufbereitung in Nürnberg, Schwaig und der gesamten Umgebung an. Kontaktieren Sie uns für weitere Informationen zu Ihrem Standort.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Welche Produkte verwenden Sie für die Autoreinigung?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Wir verwenden ausschließlich hochwertige, pH-neutrale Reinigungsprodukte, die schonend zu Lack, Polstern und Oberflächen sind. Auf Wunsch setzen wir auch umweltfreundliche Produkte ein.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Kann ich zusätzliche Leistungen buchen?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Ja, wir bieten verschiedene Zusatzoptionen wie Lackversiegelung, Polsterreinigung, Ozon-Behandlung und mehr. Diese können Sie zu jedem Paket hinzubuchen.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Wie buche ich einen Termin?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Nutzen Sie einfach unser Kontaktformular, rufen Sie uns an unter 0170 909 57 30 oder schreiben Sie uns eine E-Mail an info@interiorglanz.de.</p>
                     </div>
                 </div>
             </div>
