@@ -1,33 +1,3 @@
-// Dark Mode Toggle
-const themeToggle = document.getElementById('themeToggle');
-const html = document.documentElement;
-
-// Check for saved theme preference or default to 'light' mode
-const currentTheme = localStorage.getItem('theme') || 'light';
-html.setAttribute('data-theme', currentTheme);
-
-// Update icon based on current theme
-function updateThemeIcon() {
-    const icon = themeToggle.querySelector('i');
-    if (html.getAttribute('data-theme') === 'dark') {
-        icon.className = 'fas fa-sun';
-    } else {
-        icon.className = 'fas fa-moon';
-    }
-}
-
-updateThemeIcon();
-
-// Toggle theme
-themeToggle.addEventListener('click', () => {
-    const currentTheme = html.getAttribute('data-theme');
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    
-    html.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-    updateThemeIcon();
-});
-
 // Mobile Menu Toggle
 const mobileMenuToggle = document.getElementById('mobileMenuToggle');
 const nav = document.getElementById('nav');
@@ -162,15 +132,6 @@ window.addEventListener('load', () => {
     document.body.classList.add('loaded');
 });
 
-// Prevent body scroll when mobile menu is open
-nav.addEventListener('transitionend', () => {
-    if (nav.classList.contains('active')) {
-        document.body.style.overflow = 'hidden';
-    } else {
-        document.body.style.overflow = 'auto';
-    }
-});
-
 // Log page load for analytics (can be extended)
 console.log('InteriorGlanz website loaded successfully');
 
@@ -270,3 +231,78 @@ faqItems.forEach(item => {
         }
     });
 });
+
+// Before/After Slider
+const effectSlider = document.getElementById('effectSlider');
+const effectHandle = document.getElementById('effectHandle');
+const effectAfter = document.querySelector('.effect-after');
+
+let isDragging = false;
+
+// Tab switching
+const effectTabs = document.querySelectorAll('.effect-tab');
+const effectDescriptions = {
+    lack: 'Professionelle Lackaufbereitung mit Hochglanzpolitur und Versiegelung. Kratzer entfernt, Glanz wiederhergestellt.',
+    innenraum: 'Komplette Innenraumreinigung mit Polsterreinigung und Lederaufbereitung. Wie neu!',
+    felgen: 'Intensive Felgenreinigung und Versiegelung. Langanhaltender Schutz vor Bremsstaub.'
+};
+
+effectTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+        effectTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        
+        const tabType = tab.dataset.tab;
+        const descriptionElement = document.getElementById('effectDescription');
+        if (descriptionElement) {
+            descriptionElement.textContent = effectDescriptions[tabType];
+        }
+    });
+});
+
+// Slider dragging functionality
+if (effectHandle && effectSlider) {
+    function updateSlider(clientX) {
+        const rect = effectSlider.getBoundingClientRect();
+        const x = clientX - rect.left;
+        const percentage = Math.max(0, Math.min(100, (x / rect.width) * 100));
+        
+        effectHandle.style.left = percentage + '%';
+        effectAfter.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`;
+    }
+    
+    effectHandle.addEventListener('mousedown', () => {
+        isDragging = true;
+    });
+    
+    document.addEventListener('mousemove', (e) => {
+        if (isDragging) {
+            updateSlider(e.clientX);
+        }
+    });
+    
+    document.addEventListener('mouseup', () => {
+        isDragging = false;
+    });
+    
+    // Touch support
+    effectHandle.addEventListener('touchstart', (e) => {
+        isDragging = true;
+        e.preventDefault();
+    });
+    
+    document.addEventListener('touchmove', (e) => {
+        if (isDragging && e.touches.length > 0) {
+            updateSlider(e.touches[0].clientX);
+        }
+    });
+    
+    document.addEventListener('touchend', () => {
+        isDragging = false;
+    });
+    
+    // Click anywhere on slider to update
+    effectSlider.addEventListener('click', (e) => {
+        updateSlider(e.clientX);
+    });
+}

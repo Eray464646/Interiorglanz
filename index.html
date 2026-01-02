@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script type="application/ld+json">
     {
@@ -134,21 +134,18 @@
                 </div>
                 <nav class="nav" id="nav">
                     <ul class="nav-list">
-                        <li><a href="#home" class="nav-link">Home</a></li>
-                        <li><a href="#pakete" class="nav-link">Pakete</a></li>
-                        <li><a href="#zusatzoptionen" class="nav-link">Zusatzoptionen</a></li>
-                        <li><a href="#uber-uns" class="nav-link">Über uns</a></li>
-                        <li><a href="#kontakt" class="nav-link">Kontakt</a></li>
+                        <li><a href="#home" class="nav-link">HOME</a></li>
+                        <li><a href="#pakete" class="nav-link">PAKETE</a></li>
+                        <li><a href="#zusatzoptionen" class="nav-link">ZUSATZOPTIONEN</a></li>
+                        <li><a href="#uber-uns" class="nav-link">ÜBER UNS</a></li>
+                        <li><a href="#kontakt" class="nav-link">KONTAKT</a></li>
                     </ul>
                 </nav>
                 <div class="header-actions">
-                    <a href="tel:+4991112345678" class="contact-item">
+                    <a href="tel:+4991112345678" class="btn-call">
                         <i class="fas fa-phone"></i>
-                        <span>0911 / 123 456 78</span>
+                        <span>Anrufen</span>
                     </a>
-                    <button class="theme-toggle" id="themeToggle" aria-label="Theme umschalten">
-                        <i class="fas fa-moon"></i>
-                    </button>
                     <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menü öffnen">
                         <span></span>
                         <span></span>
@@ -162,11 +159,124 @@
         <div class="hero-overlay"></div>
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">Mobile Autoreinigung Nürnberg – Professionelle Autoaufbereitung direkt vor Ort</h1>
-                <p class="hero-subtitle">Ihre Experten für <strong>mobile Autoreinigung in Nürnberg</strong>. Wir kommen direkt zu Ihnen! Professionelle <strong>Autoaufbereitung</strong> mit Komplettpaket, Außenwäsche und 3 Innenreinigungspaketen – bequem vor Ihrer Haustür.</p>
-                <div class="hero-buttons animate-fade-in-delay-2">
-                    <a href="#pakete" class="btn btn-primary btn-large">Pakete ansehen</a>
-                    <a href="#kontakt" class="btn btn-secondary btn-large">Termin vereinbaren</a>
+                <div class="hero-badge">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>100% Mobile Fahrzeugaufbereitung</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="title-line-1">Mobile Autoreinigung &</span>
+                    <span class="title-line-2">Autoaufbereitung Nürnberg</span>
+                </h1>
+                <div class="hero-description">
+                    <div class="description-bar"></div>
+                    <p>Ihre Experten für mobile Autoreinigung in Nürnberg. Wir kommen direkt zu Ihnen! Professionelle Autoaufbereitung mit Komplettpaket, Außenwäsche und 3 Innenreinigungspaketen – bequem vor Ihrer Haustür.</p>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#kontakt" class="btn btn-primary btn-large">
+                        <span>Jetzt Termin anfragen</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#pakete" class="btn btn-secondary btn-large">Preise ansehen</a>
+                </div>
+                <div class="hero-trust-pills">
+                    <div class="trust-pill">
+                        <i class="fas fa-check"></i>
+                        <span>Anfahrt inkl.</span>
+                    </div>
+                    <div class="trust-pill">
+                        <i class="fas fa-check"></i>
+                        <span>Strom & Wasser on board</span>
+                    </div>
+                    <div class="trust-pill">
+                        <i class="fas fa-check"></i>
+                        <span>Premium Ausrüstung</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-divider">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0 L1200,0 L1200,60 L0,120 Z" fill="#f8fafc"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Before/After Slider Section -->
+    <section class="effect-section" id="effect">
+        <div class="effect-background-text">EFFECT</div>
+        <div class="container">
+            <h2 class="section-title center">Der Effekt</h2>
+            <p class="section-subtitle center">Sehen Sie selbst den Unterschied unserer professionellen Arbeit</p>
+            
+            <div class="effect-tabs">
+                <button class="effect-tab active" data-tab="lack">Lack</button>
+                <button class="effect-tab" data-tab="innenraum">Innenraum</button>
+                <button class="effect-tab" data-tab="felgen">Felgen</button>
+            </div>
+            
+            <div class="effect-slider-container">
+                <div class="effect-slider" id="effectSlider">
+                    <div class="effect-image effect-before">
+                        <div class="effect-label label-before">Vorher</div>
+                    </div>
+                    <div class="effect-image effect-after">
+                        <div class="effect-label label-after">Nachher</div>
+                    </div>
+                    <div class="effect-handle" id="effectHandle">
+                        <i class="fas fa-chevron-left"></i>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+                <div class="effect-info">
+                    <i class="fas fa-magic"></i>
+                    <p id="effectDescription">Professionelle Lackaufbereitung mit Hochglanzpolitur und Versiegelung. Kratzer entfernt, Glanz wiederhergestellt.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="process-section" id="process">
+        <div class="process-blob"></div>
+        <div class="container">
+            <h2 class="section-title center">Wie es funktioniert</h2>
+            <p class="section-subtitle center">In 4 einfachen Schritten zu Ihrem glänzenden Fahrzeug</p>
+            
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="process-icon">
+                        <i class="fas fa-calendar-check"></i>
+                        <span class="process-badge">01</span>
+                    </div>
+                    <h3>Termin buchen</h3>
+                    <p>Wählen Sie Ihr Wunschpaket und buchen Sie online oder telefonisch Ihren Termin</p>
+                </div>
+                <div class="process-line"></div>
+                <div class="process-step">
+                    <div class="process-icon">
+                        <i class="fas fa-route"></i>
+                        <span class="process-badge">02</span>
+                    </div>
+                    <h3>Wir kommen zu Ihnen</h3>
+                    <p>Unser Team kommt pünktlich zu Ihrem Wunschort mit kompletter Ausrüstung</p>
+                </div>
+                <div class="process-line"></div>
+                <div class="process-step">
+                    <div class="process-icon">
+                        <i class="fas fa-hands-wash"></i>
+                        <span class="process-badge">03</span>
+                    </div>
+                    <h3>Professionelle Aufbereitung</h3>
+                    <p>Wir reinigen und pflegen Ihr Fahrzeug mit Premium-Produkten und modernster Technik</p>
+                </div>
+                <div class="process-line"></div>
+                <div class="process-step">
+                    <div class="process-icon">
+                        <i class="fas fa-star"></i>
+                        <span class="process-badge">04</span>
+                    </div>
+                    <h3>Genießen Sie das Ergebnis</h3>
+                    <p>Ihr Fahrzeug erstrahlt in neuem Glanz – bereit für die nächste Fahrt</p>
                 </div>
             </div>
         </div>
@@ -340,6 +450,18 @@
         </div>
     </section>
 
+    <!-- Services Banner -->
+    <section class="services-banner">
+        <div class="services-banner-pattern"></div>
+        <div class="container">
+            <div class="services-banner-content">
+                <h2>Wir kommen zu Ihnen</h2>
+                <p>Mobile Autoaufbereitung in ganz Nürnberg und Umgebung</p>
+                <a href="#kontakt" class="btn btn-dark">Jetzt Termin buchen</a>
+            </div>
+        </div>
+    </section>
+
     <!-- Additional Options Section -->
     <section class="extras-section" id="zusatzoptionen">
         <div class="container">
@@ -348,6 +470,7 @@
             
             <div class="extras-grid-compact">
                 <div class="extra-card">
+                    <div class="card-corner"></div>
                     <div class="extra-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
@@ -359,9 +482,13 @@
                         <li><i class="fas fa-check"></i> UV-Schutz inklusive</li>
                         <li><i class="fas fa-check"></i> Hochglanz-Finish</li>
                     </ul>
+                    <div class="extra-link">
+                        <a href="#kontakt">Dazu buchen <i class="fas fa-arrow-right"></i></a>
+                    </div>
                 </div>
 
                 <div class="extra-card">
+                    <div class="card-corner"></div>
                     <div class="extra-icon">
                         <i class="fas fa-wind"></i>
                     </div>
@@ -373,9 +500,13 @@
                         <li><i class="fas fa-check"></i> Bakterienbeseitigung</li>
                         <li><i class="fas fa-check"></i> Gesundes Raumklima</li>
                     </ul>
+                    <div class="extra-link">
+                        <a href="#kontakt">Dazu buchen <i class="fas fa-arrow-right"></i></a>
+                    </div>
                 </div>
 
                 <div class="extra-card">
+                    <div class="card-corner"></div>
                     <div class="extra-icon">
                         <i class="fas fa-compact-disc"></i>
                     </div>
@@ -387,6 +518,9 @@
                         <li><i class="fas fa-check"></i> Leichte Reinigung</li>
                         <li><i class="fas fa-check"></i> Alle 4 Felgen</li>
                     </ul>
+                    <div class="extra-link">
+                        <a href="#kontakt">Dazu buchen <i class="fas fa-arrow-right"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -394,6 +528,7 @@
 
     <!-- About Section -->
     <section class="about" id="uber-uns">
+        <div class="about-pattern"></div>
         <div class="container">
             <div class="about-content">
                 <div class="about-text">
@@ -427,22 +562,27 @@
                         </div>
                     </div>
                 </div>
-                <div class="about-image">
-                    <div class="image-placeholder">
-                        <i class="fas fa-car-side"></i>
+                <div class="about-images">
+                    <div class="about-image-collage">
+                        <div class="image-placeholder image-1">
+                            <i class="fas fa-spray-can"></i>
+                        </div>
+                        <div class="image-placeholder image-2">
+                            <i class="fas fa-car-side"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-badge">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Fantastische Arbeit! Mein Auto sieht aus wie neu."</p>
+                        <span>- Michael S.</span>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Mobile Service Highlight -->
-    <section class="mobile-service">
-        <div class="container">
-            <div class="mobile-service-content">
-                <i class="fas fa-map-marker-alt"></i>
-                <h2>Mobile Autoreinigung - Wir kommen zu Ihnen!</h2>
-                <p>Mobile Autoaufbereitung in ganz Nürnberg und Umgebung – bequem, professionell, zuverlässig. Buchen Sie jetzt Ihre <strong>mobile Autoreinigung</strong>!</p>
             </div>
         </div>
     </section>
@@ -450,9 +590,54 @@
     <!-- Contact Section -->
     <section class="contact" id="kontakt">
         <div class="container">
-            <h2 class="section-title">Jetzt Termin vereinbaren</h2>
-            <div class="contact-grid">
-                <div class="contact-form-wrapper">
+            <h2 class="section-title center">Jetzt Termin vereinbaren</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info-panel">
+                    <h3>Kontaktinformationen</h3>
+                    <div class="contact-info-grid">
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Telefon</h4>
+                                <a href="tel:+4991112345678">0911 / 123 456 78</a>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>E-Mail</h4>
+                                <a href="mailto:info@interiorglanz.de">info@interiorglanz.de</a>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Servicegebiet</h4>
+                                <p>Nürnberg und Umgebung (20km Radius)</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Öffnungszeiten</h4>
+                                <p>Mo-Sa: 08:00 - 18:00 Uhr</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-panel">
+                    <div class="urgency-banner">
+                        <i class="fas fa-fire"></i>
+                        <span>Hohe Nachfrage! Nächster verfügbarer Termin: <strong>in 3 Tagen</strong></span>
+                    </div>
                     <form class="contact-form" id="contactForm">
                         <div class="form-row">
                             <div class="form-group">
@@ -488,6 +673,23 @@
                             </div>
                         </div>
                         <div class="form-group">
+                            <label>Zusatzleistungen</label>
+                            <div class="checkbox-options">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="addon-ceramic" value="ceramic">
+                                    <span>Keramikversiegelung (+199€)</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="addon-ozone" value="ozone">
+                                    <span>Ozonbehandlung (+49€)</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="addon-wheels" value="wheels">
+                                    <span>Felgenversiegelung (+79€)</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
                             <label for="message">Nachricht</label>
                             <textarea id="message" name="message" rows="4"></textarea>
                         </div>
@@ -496,41 +698,14 @@
                             <label for="privacy">Ich akzeptiere die Datenschutzerklärung *</label>
                             <span class="error-message" id="privacyError"></span>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-large">Anfrage senden</button>
+                        <button type="submit" class="btn btn-primary btn-large btn-full">
+                            <span>Anfrage senden</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
                     </form>
                     <div class="form-success" id="formSuccess" style="display: none;">
                         <i class="fas fa-check-circle"></i>
                         <p>Vielen Dank! Wir melden uns schnellstmöglich bei Ihnen.</p>
-                    </div>
-                </div>
-                <div class="contact-info">
-                    <div class="contact-item-large">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h3>Telefon</h3>
-                            <a href="tel:+4991112345678">0911 / 123 456 78</a>
-                        </div>
-                    </div>
-                    <div class="contact-item-large">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h3>E-Mail</h3>
-                            <a href="mailto:info@interiorglanz.de">info@interiorglanz.de</a>
-                        </div>
-                    </div>
-                    <div class="contact-item-large">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h3>Servicegebiet</h3>
-                            <p>Nürnberg und Umgebung (20km Radius)</p>
-                        </div>
-                    </div>
-                    <div class="contact-item-large">
-                        <i class="fas fa-clock"></i>
-                        <div>
-                            <h3>Öffnungszeiten</h3>
-                            <p>Mo-Sa: 08:00 - 18:00 Uhr</p>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -546,7 +721,7 @@
                 <div class="faq-item">
                     <div class="faq-question">
                         <h3>Wie lange dauert eine Autoreinigung?</h3>
-                        <i class="fas fa-chevron-down"></i>
+                        <i class="fas fa-plus"></i>
                     </div>
                     <div class="faq-answer">
                         <p>Die Dauer hängt vom gewählten Paket ab. Eine Basis-Innenreinigung dauert ca. 1-1,5 Stunden, 
@@ -557,7 +732,7 @@
                 <div class="faq-item">
                     <div class="faq-question">
                         <h3>Benötigen Sie Strom und Wasser?</h3>
-                        <i class="fas fa-chevron-down"></i>
+                        <i class="fas fa-plus"></i>
                     </div>
                     <div class="faq-answer">
                         <p>Für die meisten Reinigungen benötigen wir lediglich einen Stromanschluss (230V Steckdose). 
@@ -567,7 +742,7 @@
                 <div class="faq-item">
                     <div class="faq-question">
                         <h3>In welchem Gebiet bieten Sie mobile Autoreinigung an?</h3>
-                        <i class="fas fa-chevron-down"></i>
+                        <i class="fas fa-plus"></i>
                     </div>
                     <div class="faq-answer">
                         <p>Wir sind in ganz <strong>Nürnberg</strong> und im Umkreis von ca. 20 km mobil unterwegs. 
@@ -577,7 +752,7 @@
                 <div class="faq-item">
                     <div class="faq-question">
                         <h3>Kann ich auch am Wochenende einen Termin bekommen?</h3>
-                        <i class="fas fa-chevron-down"></i>
+                        <i class="fas fa-plus"></i>
                     </div>
                     <div class="faq-answer">
                         <p>Ja, wir bieten auch samstags Termine an. Sprechen Sie uns einfach bei der <a href="#kontakt">Terminvereinbarung</a> 
@@ -587,7 +762,7 @@
                 <div class="faq-item">
                     <div class="faq-question">
                         <h3>Welche Zahlungsmethoden akzeptieren Sie?</h3>
-                        <i class="fas fa-chevron-down"></i>
+                        <i class="fas fa-plus"></i>
                     </div>
                     <div class="faq-answer">
                         <p>Wir akzeptieren Barzahlung, EC-Karte und PayPal. Die Bezahlung erfolgt nach Abschluss der Reinigung.</p>
@@ -615,14 +790,19 @@
                 <div class="footer-section">
                     <div class="footer-logo">Interior<span>Glanz</span></div>
                     <p>Professionelle mobile Autoreinigung in Nürnberg. Wir kommen zu Ihnen!</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
                 </div>
                 <div class="footer-section">
-                    <h4>Schnelllinks</h4>
-                    <p><a href="#home">Home</a></p>
-                    <p><a href="#pakete">Pakete</a></p>
+                    <h4>Leistungen</h4>
+                    <p><a href="#pakete">Komplettpaket</a></p>
+                    <p><a href="#pakete">Außenreinigung</a></p>
+                    <p><a href="#pakete">Innenreinigung</a></p>
                     <p><a href="#zusatzoptionen">Zusatzoptionen</a></p>
-                    <p><a href="#uber-uns">Über uns</a></p>
-                    <p><a href="#kontakt">Kontakt</a></p>
                 </div>
                 <div class="footer-section">
                     <h4>Kontakt</h4>
@@ -639,7 +819,11 @@
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2024 InteriorGlanz - Mobile Autoreinigung Nürnberg. Alle Rechte vorbehalten.</p>
-                <p><a href="#">Impressum</a> | <a href="#">Datenschutz</a> | <a href="#">AGB</a></p>
+                <div class="footer-links">
+                    <a href="#">Impressum</a>
+                    <a href="#">Datenschutz</a>
+                    <a href="#">AGB</a>
+                </div>
             </div>
         </div>
     </footer>
